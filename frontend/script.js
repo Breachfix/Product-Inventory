@@ -18,7 +18,13 @@ document.getElementById("addProductForm").addEventListener("submit", function (e
 
     document.getElementById("addProductForm").reset(); // Clear form
 
+        // Alert the user that the product has been added
+    alert("Product has been added successfully!");
+
     displayProducts();
+
+    // Scroll to the product list after adding
+    document.getElementById("productList").scrollIntoView({ behavior: "smooth" });
 });
 
 // Search Product
