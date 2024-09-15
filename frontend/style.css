@@ -1,0 +1,256 @@
+/*-----------------------------------*\
+  #CUSTOM PROPERTY
+\*-----------------------------------*/
+
+:root {
+
+    /* Colors */
+    --black: #000000;
+  
+    /* Light theme colors */
+    --background-light: #FFFBFF;
+    --on-background-light: #201A18;
+    --surface-light: #FFF8F6;
+    --surface-container-low-light: #FEF1EC;
+    --surface-container-highest-light: #EDE0DB;
+    --on-surface-light: #201A18;
+    --on-surface-variant-light: #52443D;
+    --primary-light: #9D4300;
+    --on-primary-light: #FFFFFF;
+    --outline-light: #85736B;
+    --outline-variant-light: #D7C2B9;
+  
+    /* Dark theme colors */
+    --background-dark: #201A18;
+    --on-background-dark: #EDE0DB;
+    --surface-dark: #181210;
+    --surface-container-low-dark: #201A18;
+    --surface-container-highest-dark: #3A3330;
+    --on-surface-dark: #D0C4BF;
+    --on-surface-variant-dark: #D7C2B9;
+    --primary-dark: #FFB690;
+    --on-primary-dark: #552100;
+    --outline-dark: #A08D84;
+    --outline-variant-dark: #52443D;
+  
+    /* Typography */
+    --font-primary: 'Kumbh Sans', sans-serif;
+    --fs-body-medium: 1.4rem;
+    --fs-title-large: 2.2rem;
+    --fs-headline-large: 3.2rem;
+    --fw-medium: 500;
+  
+    /* Spacing */
+    --spacing-3: 12px;
+    --spacing-4: 16px;
+    --spacing-6: 24px;
+  
+    /* Border Radius */
+    --radius-small: 8px;
+    --radius-large: 16px;
+  
+    /* Shadows */
+    --shadow-1: 0px 1px 3px 1px #00000026, 0px 1px 2px 0px #0000004d;
+  
+    /* Transition */
+    --tr-duration-short: 200ms;
+  }
+  
+  /* Light Theme */
+  [data-theme="light"] {
+    --background: var(--background-light);
+    --on-background: var(--on-background-light);
+    --surface: var(--surface-light);
+    --primary: var(--primary-light);
+    --on-primary: var(--on-primary-light);
+  }
+  
+  /* Dark Theme */
+  [data-theme="dark"] {
+    --background: var(--background-dark);
+    --on-background: var(--on-background-dark);
+    --surface: var(--surface-dark);
+    --primary: var(--primary-dark);
+    --on-primary: var(--on-primary-dark);
+  }
+  
+  /*-----------------------------------*\
+    #Base styles
+  \*-----------------------------------*/
+  body {
+    background-color: var(--background);
+    color: var(--on-background);
+    font-family: var(--font-primary);
+    font-size: var(--fs-body-medium);
+    margin: 0;
+    padding: 20px;
+    transition: background-color var(--tr-duration-short), color var(--tr-duration-short);
+  }
+  
+  /*-----------------------------------*\
+    #Header styles
+  \*-----------------------------------*/
+  .main-header {
+    text-align: center;
+    padding: var(--spacing-6);
+    background-color: var(--surface);
+    border-bottom: 2px solid var(--outline-light);
+    box-shadow: var(--shadow-1);
+  }
+  
+  /* Title styling */
+  .text-headline-large {
+    font-size: var(--fs-headline-large);
+    font-weight: var(--fw-medium);
+    color: var(--primary);
+  }
+  .wrapper {
+    text-align: center; /* Center the text within the wrapper */
+  }
+  
+  /*-----------------------------------*\
+    #Card styles
+  \*-----------------------------------*/
+  .card {
+    background-color: var(--surface);
+    border: 1px solid var(--outline-light);
+    border-radius: var(--radius-small);
+    box-shadow: var(--shadow-1);
+    margin-bottom: var(--spacing-6);
+    padding: var(--spacing-6);
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /*-----------------------------------*\
+    #Auth form styles
+  \*-----------------------------------*/
+  .auth-form label {
+    display: block;
+    margin-bottom: var(--spacing-3);
+  }
+  
+  .auth-form input {
+    width: 95%;
+    padding: var(--spacing-3);
+    margin-top: var(--spacing-1);
+    margin-bottom: var(--spacing-4);
+    border-radius: var(--radius-small);
+    border: 1px solid var(--outline-light);
+  }
+  
+  .auth-form button {
+    background-color: var(--primary);
+    color: var(--on-primary);
+    padding: var(--spacing-4);
+    border-radius: var(--radius-small);
+    cursor: pointer;
+    transition: background-color var(--tr-duration-short);
+  }
+  
+  /* Button hover effect */
+  .auth-form button:hover {
+    background-color: var(--primary-light);
+  }
+  
+  /* Fill button styles */
+  .btn.fill {
+    background-color: var(--primary);
+    color: var(--on-primary);
+  }
+  
+  /* Text button styles */
+  .btn.text {
+    color: var(--primary);
+  }
+  
+  /*-----------------------------------*\
+    #Theme toggle button
+  \*-----------------------------------*/
+  .theme-btn {
+    position: sticky;
+    top: 0;
+    margin-left: auto;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+  }
+  
+  .icon-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+  }
+  
+  .material-symbols-rounded {
+    font-family: 'Material Symbols Rounded';
+    font-size: 24px;
+  }
+  
+  /* Light mode icon button */
+  [data-theme="light"] .icon-btn {
+    color: #000000;
+  }
+  
+  /* Dark mode icon button */
+  [data-theme="dark"] .icon-btn {
+    color: #FFFFFF;
+  }
+  
+  /* Dark and Light Icons Visibility */
+  .theme-btn .dark-icon {
+    display: none;
+  }
+  
+  [data-theme="dark"] .theme-btn .dark-icon {
+    display: block;
+  }
+  
+  .theme-btn .light-icon {
+    display: block;
+  }
+  
+  [data-theme="dark"] .theme-btn .light-icon {
+    display: none;
+  }
+  
+  /*-----------------------------------*\
+    #Dark Theme Specific Updates
+  \*-----------------------------------*/
+  /* Update card styling in dark mode */
+  [data-theme="dark"] .card {
+    background-color: var(--surface-container-low-dark);
+    border: 1px solid var(--outline-dark);
+    color: var(--on-background-dark);
+  }
+  
+  /* Input fields in dark mode */
+  [data-theme="dark"] .auth-form input {
+    background-color: var(--surface-container-low-dark);
+    border: 1px solid var(--outline-dark);
+    color: var(--on-surface-dark);
+  }
+  
+  /* Input hover and focus in dark mode */
+  [data-theme="dark"] .auth-form input:focus {
+    border-color: var(--primary-dark);
+  }
+  
+  /* Button styles in dark mode */
+  [data-theme="dark"] .auth-form button {
+    background-color: var(--primary-dark);
+    color: var(--on-primary-dark);
+  }
+  
+  /* Button hover in dark mode */
+  [data-theme="dark"] .auth-form button:hover {
+    background-color: var(--primary-dark);
+  }
+  

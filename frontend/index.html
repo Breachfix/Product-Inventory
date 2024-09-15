@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <title>Product Inventory</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="themes.js"></script>
+</head>
+<body>
+   
+    <main class="main"> 
+        <div class="header">
+            <button class="theme-btn icon-btn large" aria-label="Toggle theme" data-tooltip="Toggle theme" data-theme-btn>
+                <span class="material-symbols-rounded dark-icon" aria-hidden="true">dark_mode</span>
+                <span class="material-symbols-rounded light-icon" aria-hidden="true">light_mode</span>
+        
+                <div class="state-layer"></div>
+              </button>
+            <div class="wrapper">
+                <h1 class="text-headline-large">Product Inventory</h1>
+            </div>
+
+
+                
+        
+        
+        </div>
+        
+
+ 
+        <!-- Add Product Section -->
+
+        
+        <section class="card">
+            <h2 class="text-title-large">Add Product</h2>
+            <form id="addProductForm" class="auth-form">
+                <label>ID: <input type="number" id="productId" required></label><br>
+                <label>Name: <input type="text" id="productName" required></label><br>
+                <label>Category: <input type="text" id="productCategory" required></label><br>
+                <label>Size: <input type="text" id="productSize" required></label><br>
+                <label>Quantity: <input type="number" id="productQuantity" required></label><br>
+                <label>Price: <input type="number" id="productPrice" required></label><br>
+                <button type="submit" class="btn fill">Add Product</button>
+            </form>
+        </section>
+
+        <!-- Search Product Section -->
+        <section class="card">
+            <h2 class="text-title-large">Search & Update Product</h2>
+            <form id="searchProductForm" class="auth-form">
+                <label>Search by ID: <input type="number" id="searchProductId" required></label>
+                <button type="submit" class="btn fill">Search Product</button>
+            </form>
+            <div id="searchResult" class="note-item"></div>
+            <form id="updateProductForm" class="auth-form" style="display: none;">
+                <h3>Update Product</h3>
+                <label>Name: <input type="text" id="updateProductName" required></label><br>
+                <label>Category: <input type="text" id="updateProductCategory" required></label><br>
+                <label>Size: <input type="text" id="updateProductSize" required></label><br>
+                <label>Quantity: <input type="number" id="updateProductQuantity" required></label><br>
+                <label>Price: <input type="number" id="updateProductPrice" required></label><br>
+                <button type="submit" class="btn fill">Update Product</button>
+            </form>
+        </section>
+
+        <!-- Product List Section -->
+        <section class="card">
+            <h2 class="text-title-large">Product List</h2>
+            <button id="sortButton" class="btn text">Sort Products</button>
+            <div id="productList" class="note-list"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
