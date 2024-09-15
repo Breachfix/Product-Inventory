@@ -58,7 +58,7 @@ A user-friendly **Product Inventory Management** system to add, search, update, 
 ### **Installation Steps**
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/your-username/product-inventory.git
+    git clone https://github.com/Breachfix/Product-Inventory.git
     ```
 
 2. **Install dependencies**:
@@ -152,7 +152,11 @@ This app uses an **AVL Tree** to manage products. The AVL tree is a self-balanci
 - **Left-Right Rotation**: Balances more complex cases when both left and right subtrees are imbalanced.
 
 ---
+## ✨ Developer
 
+Developed with ❤️ by **Jack Ntihaniraho**. Feel free to explore, contribute, and provide feedback!
+
+---
 ## 📄 **License**
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
