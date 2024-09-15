@@ -74,7 +74,7 @@ A user-friendly **Product Inventory Management** system to add, search, update, 
 
 4. **Start the frontend server**:
     ```bash
-    npm start
+    npm run start
     ```
 
 ### **Access**
